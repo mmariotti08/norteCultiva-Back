@@ -1,3 +1,8 @@
+# Ignorar archivos y directorios generados automáticamente
 .env
 node_modules
 package-lock.jsongit 
+
+# Ignorar archivos temporales
+*.tmp
+*.log
