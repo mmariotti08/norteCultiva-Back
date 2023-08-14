@@ -1,0 +1,59 @@
+{
+    "products":[
+        {
+            "name":"picador",
+            "brand":"Raw",
+            "color":"dorado",
+            "detail":"picador dorado raw",
+            "price":"3000",
+            "img":["https://imgs.search.brave.com/2mJnzqy_Niu45mzzb3XztzGApeKJn6Fzsdfx1TXhGFY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9OUV9OUF85/ODA2NDMtTUxBNDgx/MzQxNzE2ODJfMTEy/MDIxLVcud2VicA"]
+
+            
+
+        },
+        {
+            "name":"bandeja",
+            "brand":"Raw",
+            "color":"beige",
+            "detail":"bandeja raw tamaño mediano",
+            "price":"2500",
+            "img":["https://imgs.search.brave.com/Wj4p_OGMQO2I4mWRLMkqEIDUTcQyfVUFK-MNWDvP13g/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jb25l/eGRpc3RyaWJ1aWRv/cmEuc3RvcmUvMTc0/Ni1sYXJnZV9kZWZh/dWx0L2JhbmRlamEt/cmF3LW1lZGlhbmEu/anBn"]
+
+            
+
+        },
+        {
+            "name":"carpa",
+            "brand":"ProBox",
+            "color":"negro/reflex",
+            "detail":"carpa ProBox 1mtx1mt",
+            "price":"25000",
+            "img":["https://imgs.search.brave.com/sHe2vlrADxIL6efuBql0Uvcf5gogsFS1PnShCKb-pK4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9OUV9OUF84/NjM1ODMtTUxBNDc5/NjgyODUyOTZfMTAy/MDIxLVcud2VicA"]
+
+            
+
+        },
+        {
+            "name":"sustrato",
+            "brand":"Cultivate",
+            "color":"Blanca",
+            "detail":"Sustrato premiun Cultivate",
+            "price":"2000",
+            "img":["hhttps://imgs.search.brave.com/betv2lvjS14t4c2JeuAnVOpAVapKj9QVAaiRYuyi8Z8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kMnI5/ZXB5Y2V3ZWc1bi5j/bG91ZGZyb250Lm5l/dC9zdG9yZXMvMDAx/LzMwMy83MTkvcHJv/ZHVjdHMvY3VsdGl2/YXRlLXByZW1pdW0x/LWU2ODYxZTQ2ZjQx/M2U1MzA3ODE1OTk2/OTMzOTM5MDM0LTI0/MC0wLnBuZw"]
+
+            
+
+        },
+        {
+            "name":"Pack Namaste",
+            "brand":"Namaste",
+            "color":"undefined",
+            "detail":"Pack fertilizantes namaste 500ml",
+            "price":"30000",
+            "img":["https://imgs.search.brave.com/uTnV4mLh3Dc_1_BpjwdIq4WasoJMuwxq8cUp02iJiH4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kMnI5/ZXB5Y2V3ZWc1bi5j/bG91ZGZyb250Lm5l/dC9zdG9yZXMvMDAx/LzQ2Ny83NDcvcHJv/ZHVjdHMvbnV0cmlw/YWNrLW5hbWFzdGUt/MjEtNTg5YWJmMzU3/MmM5ZWE3MDQ2MTYx/MTkzMzU0MzE2OTkt/MjQwLTAuanBn"]
+
+            
+
+        }
+    ]
+} 
