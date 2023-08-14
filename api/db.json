@@ -3,6 +3,7 @@
         {
             "name":"picador",
             "brand":"Raw",
+            "category":"parafernalia",
             "color":"dorado",
             "detail":"picador dorado raw",
             "price":"3000",
@@ -14,6 +15,7 @@
         {
             "name":"bandeja",
             "brand":"Raw",
+            "category":"parafernalia",
             "color":"beige",
             "detail":"bandeja raw tamaño mediano",
             "price":"2500",
@@ -25,6 +27,7 @@
         {
             "name":"carpa",
             "brand":"ProBox",
+            "category":"jardineria",
             "color":"negro/reflex",
             "detail":"carpa ProBox 1mtx1mt",
             "price":"25000",
@@ -36,6 +39,7 @@
         {
             "name":"sustrato",
             "brand":"Cultivate",
+            "category":"jardineria",
             "color":"Blanca",
             "detail":"Sustrato premiun Cultivate",
             "price":"2000",
@@ -47,6 +51,7 @@
         {
             "name":"Pack Namaste",
             "brand":"Namaste",
+            "category":"jardineria",
             "color":"undefined",
             "detail":"Pack fertilizantes namaste 500ml",
             "price":"30000",
