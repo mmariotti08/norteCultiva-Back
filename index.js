@@ -14,10 +14,14 @@ conn.sync({ force: true })
                 color:product.color,
                 detail:product.detail,
                 price:product.price,
-                img: Array.isArray(product.img) ? product.img : [product.img]
+                img: Array.isArray(product.img) ? product.img : [product.img],
+                status:product.status
             }
         })
+        await conn.models.Product.bulkCreate(productData)
     })
+    
+
     .then(() => {
         server.listen(PORT, () => {
             console.log(`Server listening on port ${PORT}`);
