@@ -1,7 +1,7 @@
 const userRoutes = require("express").Router();
 
-const { getUserController } = require("../constrollers/userController/getUserController");
-const { getUserControllerID } = require("../constrollers/userController/getUserControllerID");
+const { getUserController } = require("../controllers/userController/getUserController");
+const { getUserControllerID } = require("../controllers/userController/getUserControllerID");
 
 
 userRoutes.get("/", getUserController)
