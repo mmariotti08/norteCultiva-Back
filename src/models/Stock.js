@@ -8,11 +8,7 @@ module.exports = (sequelize) => {
             autoIncrement: true
         },
        
-        size: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        quantity: {
+        quentity: {
             type: DataTypes.INTEGER,
             
         }
