@@ -1,30 +1,26 @@
+require("dotenv").config();
 const { Sequelize } = require('sequelize');
 const path = require('path');
 const fs = require('fs');
 require("dotenv").config();
+const productModel = require('./models/Product')
+const usersModel = require('./models/Users')
 const { DB_USER, DB_PASSWORD, DB_HOST  } = process.env;
 
 const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/norteCultiva`, {
-  
+  logging: false,
   native: false
 });
-const basename = path.basename(__filename);
 
-const modelDefiners = [];
+productModel(sequelize)
+usersModel(sequelize)
 
-fs.readdirSync(path.join(__dirname, '/model'))
-  .filter((file) => (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js'))
-  .forEach((file) => {
-    modelDefiners.push(require(path.join(__dirname, '/model', file)));
-  });
 
-modelDefiners.forEach(model => model(sequelize));
 
-let entries = Object.entries(sequelize.models);
-let capsEntries = entries.map((entry) => [entry[0][0].toUpperCase() + entry[0].slice(1), entry[1]]);
-sequelize.models = Object.fromEntries(capsEntries);
 
-const { Product} = sequelize.models;
+const { Product, User} = sequelize.models;
+
+
 
 module.exports = {
     ...sequelize.models, 
