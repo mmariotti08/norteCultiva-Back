@@ -16,7 +16,12 @@ usersModel(sequelize)
 orderModel(sequelize)
 
 
-const { Product, User, Order,} = sequelize.models;
+
+
+const { Product, User, Order, Stock} = sequelize.models;
+
+Product.hasMany(Stock, { foreignKey: 'productId' });
+Stock.belongsTo(Product, { foreignKey: 'productId' });
 
 
 module.exports = {
