@@ -1,15 +1,28 @@
 require("dotenv").config();
 const { Sequelize } = require('sequelize');
-const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
+const path = require('path');
+const fs = require('fs');
+require("dotenv").config();
+const productModel = require('./models/Product')
+const usersModel = require('./models/Users')
+const { DB_USER, DB_PASSWORD, DB_HOST  } = process.env;
 
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/nortecultiva`, {
+const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/norteCultiva`, {
   logging: false,
   native: false
 });
 
-const { } = sequelize.models;
+productModel(sequelize)
+usersModel(sequelize)
+
+
+
+
+const { Product, User} = sequelize.models;
+
+
 
 module.exports = {
-    ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
-    sequelize,     // para importart la conexión { conn } = require('./db.js');
+    ...sequelize.models, 
+    conn: sequelize,     
   };
