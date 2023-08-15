@@ -5,4 +5,4 @@ const {getIdController} = require('../controllers/products/getIdController.js')
 productsRoutes.get('/', getProductsController);
 productsRoutes.get('/:id', getIdController)
 
-module.exports = {productsRoutes};
+module.exports = productsRoutes;

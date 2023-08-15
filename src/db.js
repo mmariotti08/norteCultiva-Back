@@ -23,7 +23,6 @@ const { Product, User, Order, Stock } = sequelize.models;
 Product.hasMany(Stock, { foreignKey: 'productId' });
 Stock.belongsTo(Product, { foreignKey: 'productId' });
 
-console.log("los modelos de sequelize son : ", sequelize.models)
 
 module.exports = {
     ...sequelize.models, 
