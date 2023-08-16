@@ -20,10 +20,10 @@ module.exports=(sequelize)=>{
             payment_method: {
                 type: DataTypes.STRING,
               },
-              shipping_address: {
+            shipping_address: {
                 type: DataTypes.STRING,
               },
-              delivery_date: {
+            delivery_date: {
                 type: DataTypes.DATE,
               },
             },

@@ -23,6 +23,12 @@ const { Product, User, Order, Stock } = sequelize.models;
 Product.hasMany(Stock, { foreignKey: 'productId' });
 Stock.belongsTo(Product, { foreignKey: 'productId' });
 
+User.hasMany(Order, { foreignKey: 'userId' });
+Order.belongsTo(User, { foreignKey: 'userId' });
+
+User.belongsToMany(Product, { through: 'Reviews' })
+Product.belongsToMany(User, { through: 'Reviews' })
+
 
 module.exports = {
     ...sequelize.models, 
