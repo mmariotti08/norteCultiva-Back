@@ -1,4 +1,4 @@
-const {updateStockHandler}=require('../../handlers/stock/updateStockHandler.js')
+const {updateStockHandler}=require('../../handlers/stock/updateStockHandler')
 
 const updateStockController = async(req,res)=>{
     try {
