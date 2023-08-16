@@ -25,6 +25,7 @@ Product.hasMany(Stock, { foreignKey: 'productId' });
 Stock.belongsTo(Product, { foreignKey: 'productId' });
 
 
+
 module.exports = {
     ...sequelize.models, 
     conn: sequelize,     

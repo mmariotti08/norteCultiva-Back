@@ -8,14 +8,14 @@ module.exports = (sequelize) => {
             defaultValue: DataTypes.UUIDV4,
             primaryKey: true
         },
-        productId: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: "Product",
-                key: "id"
-            }
-        },
+        //productId: {
+        //    type: DataTypes.INTEGER,
+        //    allowNull: false,
+        //    references: {
+        //        model: "Product",
+        //        key: "id"
+        //    }
+        //},
         userId: {
             type: DataTypes.UUID,
             allowNull: false,
