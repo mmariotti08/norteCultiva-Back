@@ -10,7 +10,7 @@ module.exports = (sequelize) => {
         },
         //productId: {
         //    type: DataTypes.INTEGER,
-        //    allowNull: false,
+        //    allowNull: true,
         //    references: {
         //        model: "Product",
         //        key: "id"
@@ -18,7 +18,7 @@ module.exports = (sequelize) => {
         //},
         userId: {
             type: DataTypes.UUID,
-            allowNull: false,
+            allowNull: true,
             references: {
                 model: "Users",
                 key: "id",
@@ -28,13 +28,10 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING
         },
         main_picture_url: {
-            type: DataTypes.ARRAY(DataTypes.STRING),
+            type: DataTypes.STRING,
         },
         retail_price_cents: {
             type: DataTypes.INTEGER
-        },
-        size: {
-            type: DataTypes.STRING
         },
         quentity: {
             type: DataTypes.INTEGER

@@ -3,24 +3,24 @@ const { createCardHandler } = require("../../handlers/carritoHandler/createCardH
 const createCardController = async ( req, res ) => {
     try {
         const data = req.body
-        const cleanData = {
-            productId: data.item.id,
-            id_user: data.user.id,
-            name: data.item.name,
-            main_picture_url: data.item.main_picture_url,
-            retail_price_cents: data.item.retail_price_cents,
-            size: data.item.size,
-            quantity: data.item.quantity
+        const cleanData = 
+        {
+            //productId: data.productId,
+            //id_user: data.id_user,
+            name: data.name,
+            main_picture_url: data.main_picture_url,
+            retail_price_cents: data.retail_price_cents,
+            quantity: data.quantity
         }
-        const { productId, id_user, name, main_picture_url, retail_price_cents, size, quantity } = cleanData
+
+        const { /*productId, id_user,*/ name, main_picture_url, retail_price_cents, quantity } = cleanData
         const response = await createCardHandler(
             { 
-                productId,
-                id_user,
+                //productId,
+                //id_user,
                 name,
                 main_picture_url,
                 retail_price_cents,
-                size,
                 quantity
             }
         )
@@ -31,7 +31,7 @@ const createCardController = async ( req, res ) => {
 
     } catch (error) {
 
-        return res.status(500).json({ error: message })
+        return res.status(500).json({ error: error.message })
 
     }
 }
