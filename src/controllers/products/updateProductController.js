@@ -1,6 +1,6 @@
-const{updatePrductHandler}=require('../../handlers/products/updatePrductHandler.js')
+const{updateProductHandler}=require('../../handlers/products/updateProductHandler.js')
 
-const updatePrductController = async(req,res)=>{
+const updateProductController = async(req,res)=>{
     const{
         product:{
             name,
@@ -18,7 +18,7 @@ const updatePrductController = async(req,res)=>{
     const{id}=req.params
 
     try {
-        const update = await updatePrductHandler({ name,brand,category,color,detail,price,img,status,}, stock, id);
+        const update = await updateProductHandler({ name,brand,category,color,detail,price,img,status,}, stock, id);
 
         update.error
         ? res.status(400).send(update.error)
@@ -28,4 +28,4 @@ const updatePrductController = async(req,res)=>{
         return error.message
     }
 }
-module.exports={updatePrductController}
+module.exports={updateProductController}

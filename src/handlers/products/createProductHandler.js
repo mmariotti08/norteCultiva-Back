@@ -1,31 +1,30 @@
-const {Product, Stock} = require('../../db')
+const { Product } = require("../../db");
 
-const createProductHandler = async (name, brand, category, color, detail, price, img, status, stock)=>{
+const createProductHandler = async ( name, brand, category, detail, price, img, status ) => {
     try {
+
+
         const createProduct = await Product.create({
             name, 
             brand, 
             category, 
-            color, 
             detail, 
             price, 
             img, 
             status
-        })
+        });
 
-        const createStock = stock.map(stock=>{
-            return{
-                productId: createProduct.id,
-				quantity: stock.quantity
-            }
-        })
 
-        await Stock.Create(createStock);
+        console.log("Producto creado:", createProduct.name);
 
-        return createProduct
+        
     } catch (error) {
-        return error.message;
+
+        console.error("Error al crear el producto:", error);
+        throw error;
+
+
     }
 }
 
-module.exports={createProductHandler}
+module.exports = { createProductHandler }

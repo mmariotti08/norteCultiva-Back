@@ -1,30 +1,44 @@
-const {createProductHandler} = require('../../handlers/products/createProductHandler')
+const { createProductHandler } = require('../../handlers/products/createProductHandler')
 
-const createProductController = async(req,res)=>{
+const createProductController = async ( req, res ) => {
     try {
-        const{
-            product:{
+
+
+        const {
                 name,
                 brand,
                 category,
-                color,
                 detail,
                 price,
                 img,
                 status,
-            },
-            stock
-        }=req.body
+        } = req.body;
+            
 
-        if(!name || !brand || !category || !color || !detail || !price || !img || !status || !stock.length) throw Error("missing data for registration")
+        if( !name || !brand || !category || !detail || !price || !img || !status ) {
+            throw new Error( "missing data for registration" );
+        }
 
-        const prduct_stock = await createProductHandler(name, brand, category, color, detail, price, img, status, stock);
+        const product = await createProductHandler( name, brand, category, detail, price, img, status );
 
-        prduct_stock.error
-        ? res.status(400).send(prduct_stock.error)
-        : res.status(200).json(prduct_stock)
-    } catch (error) {
-        return error.message
+        console.log(product)
+        
+        if(product && product.error) {
+            return res.status(400).json({error: product.error})
+        } else {
+            return res.status(200).send("Producto creado correctamente");
+        }
+
+
+
+    } catch ( error ) {
+
+
+        console.error(error);
+        return res.status(500).json({ error : "Hubo un error en el servidor" })
+
+        
     }
 }
-module.exports={createProductController}
+
+module.exports = { createProductController }
