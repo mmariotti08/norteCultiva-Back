@@ -8,8 +8,10 @@ const { getDraftController } = require('../controllers/products/getDraftControll
 
 productsRoutes.get('/', getProductsController);
 productsRoutes.get('/:id', getIdController);
-productsRoutes.post('/', createProductController);
-productsRoutes.put('/:id', updateProductController);
 productsRoutes.get('/draft', getDraftController);
+productsRoutes.post('/', createProductController);
+
+productsRoutes.put('/:id', updateProductController);
+
 
 module.exports = productsRoutes;

@@ -1,28 +1,27 @@
-const  {Product, Stock, User}=require('../../db')
+const  { Product, Stock, User } = require('../../db')
 
-const getIdHandler = async(id)=>{
+const getIdHandler = async( id ) => {
     try {
-        const response = await Product.findByPk(id,{
-            include: [
-                {
-                    model:Stock,
-                    attributes:['quantity']
-                },
-                {
-                    model:User,
-                    attributes:['name']
-                }
-            ]
-        });
+
+
+        const response = await Product.findByPk(id);
         
         if(!response){
+
             return{error:`the product ${id} Not Found`}
         }else{
+
             return response
         }
+
+
     } catch (error) {
+
+
         return error.mesage
+
+
     }
 }
 
-module.exports={getIdHandler}
+module.exports = { getIdHandler }
