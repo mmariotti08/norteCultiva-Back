@@ -2,7 +2,7 @@ const { User } = require("../../db");
 const { transporter } = require("../../mail/mailer");
 
 
-const createUserHandler = async ({ name, mail, password, phone, last_name, address }) => {
+const createUserHandler = async ({ name, mail, password, address }) => {
     try {
         
 
@@ -10,7 +10,7 @@ const createUserHandler = async ({ name, mail, password, phone, last_name, addre
 
         const [ user, create ] = await User.findOrCreate({
             where: { mail },
-            defaults: { name, password, last_name, phone, address }
+            defaults: { name, password, address }
         })
 
 
@@ -21,9 +21,7 @@ const createUserHandler = async ({ name, mail, password, phone, last_name, addre
             const userData = {
                 id: user.id,
                 name: user.name,
-                last_name: user.name,
                 mail: user.mail,
-                phone: user.phone
             }
 
 

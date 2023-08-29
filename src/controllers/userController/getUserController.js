@@ -1,4 +1,4 @@
-const getUserHandler = require("../../handlers/userHandler/getUserHandler")
+const {getUserHandler} = require("../../handlers/userHandler/getUserHandler")
 
 const getUserController = async ( req, res ) => {
     const { name } = req.query
