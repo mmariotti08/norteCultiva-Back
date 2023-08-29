@@ -1,18 +1,16 @@
 const {Op} = require('sequelize')
-const {Product, Stock}=require('../../db')
+const { Product }=require('../../db')
 
 const getProductsHandler = async ( name ) => {
     try {
 
 
-        if(name){
+        if( name ) {
 
             const product = Product.findAll({
                 where:{
                     name : {[Op.iLike]: `%${name}%`},
-                   //status:"active"
                 },
-                //include: Stock
             })
 
             if( product.length > 0 ) {
@@ -21,11 +19,10 @@ const getProductsHandler = async ( name ) => {
                 return {error:'product not found'}
             }
 
-        }else{
+        } else {
 
             const product = Product.findAll({
-                where: { status:"active" },
-                //include:[{model:Stock,}]
+                where: { status:"active" }
             });
 
             return product

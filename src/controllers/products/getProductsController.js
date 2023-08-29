@@ -2,7 +2,7 @@ const {getProductsHandler}=require('../../handlers/products/getProductsHandelr')
 
 
 const getProductsController = async ( req, res ) => {
-    const {name} = req.query
+    const { name } = req.query
     try {
 
 
