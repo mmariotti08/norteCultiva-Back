@@ -1,6 +1,6 @@
 const {Product, Stock} = require('../../db')
 
-const createProductHandler = async (name, brand, category, color, detail, price, img, status, stock)=>{
+const createProductHandler = async ({name, brand, category, color, detail, price, img, status, stock})=>{
     try {
         const createProduct = await Product.create({
             name, 

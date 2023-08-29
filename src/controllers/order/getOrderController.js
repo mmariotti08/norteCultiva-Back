@@ -1,10 +1,10 @@
 const {getOrderHandler}=require('../../handlers/order/getOrderHandler.js')
 
 const getOrderController = async(req,res)=>{
-    const{userId}=req.query
+    
 
     try {
-        const response = await getOrderHandler(userId)
+        const response = await getOrderHandler()
 
         response.error
         ? res.send(response.error)

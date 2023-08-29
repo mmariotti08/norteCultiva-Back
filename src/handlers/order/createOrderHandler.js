@@ -1,13 +1,13 @@
 const {Product, User, Order}=require('../../db')
 
-const createOrderHandler = async ({totalAmount, desctiption, status, payment_method, shipping_addres, delivery_date, products, userId})=>{
+const createOrderHandler = async ({totalAmount, desctiption, status, payment_method, shipping_address, delivery_date, products, userId})=>{
     try {
         const order = await Order.create({
             totalAmount, 
             desctiption, 
             status, 
             payment_method, 
-            shipping_addres, 
+            shipping_address, 
             delivery_date,
             userId
         });
@@ -21,7 +21,6 @@ const createOrderHandler = async ({totalAmount, desctiption, status, payment_met
         return {order}
 
     } catch (error) {
-        
         return error.message
     }
 }

@@ -1,10 +1,8 @@
 const {Order}=require('../../db')
 
-const getOrderHandler = async(userId)=>{
+const getOrderHandler = async()=>{
     try {
-        const orders = await Order.findAll({
-            include: OrderProduct
-          });
+        const orders = await Order.findAll();
           if (orders.length>0){
             return orders;
           }else{

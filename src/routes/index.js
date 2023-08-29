@@ -11,7 +11,7 @@ const router = Router();
 router.use("/user", userRoutes);
 router.use("/products", productsRoutes);
 router.use("/stock", stockRoutes)
-router.use("/orider", orderRoutes)
+router.use("/order", orderRoutes)
 router.use("/carrito", carritoRoutes);
 
 
