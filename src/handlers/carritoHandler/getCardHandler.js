@@ -1,6 +1,6 @@
 const { Carrito } = require("../../db")
 
-const getCarritoHandler = async (name) => {
+const getCardHandler = async (name) => {
     try {
         const findCard = await Carrito.findAll()
 
@@ -15,4 +15,4 @@ const getCarritoHandler = async (name) => {
     }
 }
 
-module.exports = { getCarritoHandler }
+module.exports = { getCardHandler }

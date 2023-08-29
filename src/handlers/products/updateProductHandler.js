@@ -1,6 +1,6 @@
 const {Product, Stock}=require('../../db')
 
-const updatePrductHandler = async(product, stock, id)=>{
+const updateProductHandler = async(product, stock, id)=>{
 const{name,brand,category,color,detail,price,img,status} = product
 
 try {
@@ -61,4 +61,4 @@ try {
 }
 }
 
-module.exports = {updatePrductHandler}
+module.exports = {updateProductHandler}
