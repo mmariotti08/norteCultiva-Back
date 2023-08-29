@@ -12,12 +12,7 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNull: true
         },
-        last_name: {
-            type: DataTypes.STRING
-        },
-        phone: {
-            type: DataTypes.STRING
-        },
+       
         mail: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -28,7 +23,7 @@ module.exports = (sequelize) => {
         },
         administrator: {
             type: DataTypes.BOOLEAN,
-            defaultValue: true
+            defaultValue: false
         },
         active: {
             type: DataTypes.BOOLEAN,
@@ -37,9 +32,7 @@ module.exports = (sequelize) => {
         address: {
             type: DataTypes.JSON
         },
-        picture: {
-            type: DataTypes.STRING
-        }
+       
     }, {
         hooks: {
             beforeCreate: async (user) => {

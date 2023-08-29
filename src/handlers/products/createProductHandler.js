@@ -1,6 +1,8 @@
 const { Product } = require("../../db");
 
+
 const createProductHandler = async ( name, brand, category, detail, price, img, status ) => {
+
     try {
 
 

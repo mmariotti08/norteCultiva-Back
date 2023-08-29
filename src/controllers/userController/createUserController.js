@@ -1,20 +1,18 @@
-const createUserHandler = require("../../handlers/userHandler/createUserHandler.js");
-const encryptPassword = require("../../helpers/helpers.js");
+const {createUserHandler }= require("../../handlers/userHandler/createUserHandler");
+
 
 const createUserController = async ( req, res ) => {
 
     try {
 
 
-        const { name, mail, password, phone, last_name, address, idUser } = req.body
+        const { name, mail, password, address } = req.body
 
         if( !mail ) throw Error("Necesitamos una direccion de email para completar el registro")
 
-        if( password ) {
-            await encryptPassword(password)
-        }
+       
 
-        const response = await createUserHandler({ name, mail, password, phone, last_name, address, idUser})
+        const response = await createUserHandler({ name, mail, password, address})
 
         response.error
         ? res.status(400).send(response.error)
